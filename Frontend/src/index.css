@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ROOT FIX */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+/* TYPOGRAPHY IMPROVEMENT */
+body {
+  @apply bg-surface text-slate-800 antialiased;
+}
+
+/* SMOOTH UX */
+* {
+  scroll-behavior: smooth;
+}
