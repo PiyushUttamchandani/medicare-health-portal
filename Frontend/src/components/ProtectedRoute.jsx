@@ -24,7 +24,7 @@ const ProtectedRoute = ({ children, allowedRole }) => {
     console.warn(`Access Denied: ${user.role} tried to access ${allowedRole} route`);
 
     // Alert takih user confuse na ho ki achanak redirect kyu ho gaya
-    alert(`Aap abhi as a '${user.role}' logged in hain. Book Appointment sirf 'patient' accounts ke liye hai. Kripya pehle logout karein.`);
+    alert(`You are currently logged in as a '${user.role}'. This action requires a '${allowedRole}' account. Please logout first.`);
 
     // Patient ko Home par aur Doctor ko unke dashboard par redirect karein
     return <Navigate to={user.role === 'doctor' ? "/doctor/dashboard" : "/"} replace />;
